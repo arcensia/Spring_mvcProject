@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LoginMapper">
+	 <!--
+	 <select id="logincheck" parameterType = "LoginVO" resultType="Int">
+		 select name
+		 from member
+		 where id=#{id} and pw=#{pw}
+	 </select>
+	 -->
+	
+	<select id="createUser">
+		<![CDATA[
+		INSERT INTO usertable(id,pw,email,pnum,name, created_data)
+		VALUES(#{id}, #{pw}, #{email}, #{pnum}, #{name}, now())
+		]]>
+	</select>
+	
+	<update id="updateUser">
+		<![CDATA[
+		UPDATE usertable SET
+		title = #{id},
+		pw = #{pw}
+		WHERE idx = #{idx}
+		]]>
+	</update>
+
+	<delete id="deleteUser">
+		<![CDATA[
+		DELETE FROM usertable
+		WHERE pw = #{pw}
+		]]>
+	</delete>
+	<!-- 
+	<select id = "createdUser.do" resultType="">
+		SELECT id
+		FROM usertable
+		WERE ID=#{} AND PW ==#{} 
+	</select>
+	 -->
+</mapper>

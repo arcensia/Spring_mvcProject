@@ -43,5 +43,19 @@
 	</table>
 	<br>
 	<a href="moveInsertBoard.do">글 쓰기</a>
+	<br>
+	<div class="login">
+		<form id="loginForm" action="/login/loginPage" method="post">
+			<h1>login page</h1>
+			아이디: <input type="text" name="id" placeholder="ID"></br>
+			비밀번호: <input type="text" id="pw" name="password" placeholder="PW">
+			<button type="submit">로그인</button>
+		</form>
+	</div>
+	
+	<div>	
+		<a href="moveSignup.do">회원가입</a>
+	</div>
+	
 </body>
 </html>

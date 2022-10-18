@@ -18,9 +18,5 @@
 			<button type="submit">로그인</button>
 		</form>
 	</div>
-	<div>	
-		<a href="moveSignup.do">회원가입</a>
-	</div>
-	
 </body>
 </html>

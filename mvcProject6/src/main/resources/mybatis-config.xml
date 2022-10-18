@@ -8,7 +8,7 @@
 	</settings>
 	
 	<typeAliases>
-		<package name="com.exe.Mchet.domain"/>
+		<package name="com.exe.Mchet.board.domain"/>
 	</typeAliases>
 	
 	
