@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.exe.Mchet.board.domain.BoardVO;
 import com.exe.Mchet.board.service.BoardService;
-// 출처 https://ming9mon.tistory.com/65?category=825118
+
+// https://ming9mon.tistory.com/65?category=825118
 @Controller
 public class MainController {
 	@Autowired
@@ -20,11 +21,11 @@ public class MainController {
 
 		List<BoardVO> boardList = boardService.getBoardList();
 		 
-		// Model 정보 저장
+		// Model
 		model.addAttribute("boardList",boardList);
 
-//		return "login/loginPage"; // View 이름 리턴
-		return "index"; // View 이름 리턴
+//		return "login/loginPage";
+		return "index";
 	}
 	
 }

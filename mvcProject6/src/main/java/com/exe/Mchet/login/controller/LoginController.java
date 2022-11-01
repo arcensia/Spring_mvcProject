@@ -20,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.exe.Mchet.login.domain.LoginVO;
 import com.exe.Mchet.login.service.LoginService;
-// 출처 https://ming9mon.tistory.com/65?category=825118
+//  https://ming9mon.tistory.com/65?category=825118
 
 @Controller
 @SessionAttributes("login")
@@ -29,17 +29,16 @@ public class LoginController {
 	@Autowired
 	private LoginService loginService;
 	
-	//회원가입 페이지 이동
+	//
 	@RequestMapping("/moveSignup.do") 
 	public String moveSingupPage()throws Exception{
 		return "login/signupPage";
 	}
 	
-	//회원 생성
+	//
 	@RequestMapping("/createUser.do") 
 	public String createUser(LoginVO vo)throws IOException{
 		loginService.createUser(vo);
-		return "index";
+		return "redirect:getBoardList.do";
 	}
-	
 }

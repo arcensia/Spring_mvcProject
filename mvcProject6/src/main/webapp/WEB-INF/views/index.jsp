@@ -23,7 +23,7 @@
 		</tr>
 		<c:choose>
 			<c:when test="${!empty boardList}">
-				<c:forEach items="${boardList }" var="board">
+				<c:forEach items="${boardList}" var="board">
 					<tr>
 						<td>${board.idx }</td>
 						<td align="left"><a href="getContent.do?idx=${board.idx }">

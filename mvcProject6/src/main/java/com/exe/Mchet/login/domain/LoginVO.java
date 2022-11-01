@@ -5,11 +5,12 @@ import java.util.Date;
 import lombok.*;
 
 
-//@NoArgsConstructor
-@AllArgsConstructor 
+@NoArgsConstructor
+//@AllArgsConstructor 
 @Getter
 @Setter
 @ToString
+
 public class LoginVO {
 	private int num;
 	private String id;
@@ -18,7 +19,6 @@ public class LoginVO {
 	private String name;
 	private String pnum;
 	private int seq;
-	private Data createdData;
+	private Date createdData;
 	private int userLevel;	
-	
 }
