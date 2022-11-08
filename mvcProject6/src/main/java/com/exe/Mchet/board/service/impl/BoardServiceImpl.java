@@ -12,7 +12,7 @@ import com.exe.Mchet.board.service.BoardService;
 
 @Service
 public class BoardServiceImpl implements BoardService{
-	@Autowired//bean을 주입하는 것들. spring been 클래스라 인식함. @Controller, @service, @repository, @component
+	@Autowired//bean. spring been . @Controller, @service, @repository, @component
 	private BoardDAO boardDAO;
 	
 	@Override

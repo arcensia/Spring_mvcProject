@@ -9,6 +9,7 @@
 	
 	<typeAliases>
 		<package name="com.exe.Mchet.board.domain"/>
+		<package name="com.exe.Mchet.login.domain"/>
 	</typeAliases>
 	
 	

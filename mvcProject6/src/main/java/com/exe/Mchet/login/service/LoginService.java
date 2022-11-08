@@ -3,21 +3,26 @@ package com.exe.Mchet.login.service;
 import java.util.List;
 
 import com.exe.Mchet.login.domain.LoginVO;
+import javax.servlet.http.HttpSession;
 
-public interface LoginService {
-	
-	// ê¸€ ëª©ë¡ ì¡°íšŒ
+public interface LoginService { //interface´Â ÀÌ·± ¾ÖµéÀ» ¸¸µé°Å¾ß~ ÇÏ°í ¿¹½Ã¸¦ µé¾îÁÖ´Â°Å?
+
 	List<LoginVO> getLoginList();
 	
-	// ê¸€ ìƒì„¸ ì¡°íšŒ
 	LoginVO getContent(LoginVO vo);
 	
-	// ê¸€ ë“±ë¡
+
 	void createUser(LoginVO vo);
 
-	// ê¸€ ìˆ˜ì •
 	void updateUser(LoginVO vo);
 
-	// ê¸€ ì‚­ì œ
+
 	void deleteUser(LoginVO vo);
+	
+	String loginCheck(LoginVO vo, HttpSession session);// sessionÀÌ µé¾î°¡³×?
+	void logout(HttpSession session);
+	
+	
+	
 }
+

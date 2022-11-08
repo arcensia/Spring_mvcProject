@@ -11,10 +11,10 @@
 </head>
 <body>
 	<div class="login">
-		<form id="loginForm" action="/login/loginPage" method="post">
+		<form id="loginCheck" action="loginCheck.do" method="post">
 			<h1>login page</h1>
 			아이디: <input type="text" name="id" placeholder="ID"></br>
-			비밀번호: <input type="text" id="pw" name="password" placeholder="PW">
+			비밀번호: <input type="text" id="pw" name="pw" placeholder="PW">
 			<button type="submit">로그인</button>
 		</form>
 	</div>

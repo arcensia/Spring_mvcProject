@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="LoginMapper">
-	 <!--
-	 <select id="logincheck" parameterType = "LoginVO" resultType="Int">
+
+
+	 <select id="loginCheck" parameterType = "LoginVO" resultType="String">
 		 select name
-		 from member
+		 from usertable
 		 where id=#{id} and pw=#{pw}
 	 </select>
-	 -->
 	
 	<select id="createUser">
 		<![CDATA[
@@ -32,6 +32,7 @@
 		WHERE pw = #{pw}
 		]]>
 	</delete>
+	
 	<!-- 
 	<select id = "createdUser.do" resultType="">
 		SELECT id
@@ -39,4 +40,13 @@
 		WERE ID=#{} AND PW ==#{} 
 	</select>
 	 -->
+	 
+ 	<select id="getContent" resultType="LoginVO">
+		<![CDATA[
+			SELECT *
+			FROM usertable
+			WHERE idx = #{idx}
+		]]>
+	</select>
+	
 </mapper>

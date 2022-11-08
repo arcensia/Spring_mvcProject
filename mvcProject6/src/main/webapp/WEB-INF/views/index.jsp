@@ -27,7 +27,7 @@
 					<tr>
 						<td>${board.idx }</td>
 						<td align="left"><a href="getContent.do?idx=${board.idx }">
-								${board.title }</a></td>
+								${board.title}</a></td>
 						<td>${board.writer }</td>
 						<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd"/></td>
 						<td>${board.cnt }</td>
@@ -43,17 +43,20 @@
 	</table>
 	<br>
 	<a href="moveInsertBoard.do">글 쓰기</a>
+	
+	
 	<br>
 	<div class="login">
-		<form id="loginForm" action="/login/loginPage" method="post">
+		<form id="loginCheck" action="loginCheck.do" method="post">
 			<h1>login page</h1>
 			아이디: <input type="text" name="id" placeholder="ID"></br>
-			비밀번호: <input type="text" id="pw" name="password" placeholder="PW">
+			비밀번호: <input type="text" id="pw" name="pw" placeholder="PW">
 			<button type="submit">로그인</button>
 		</form>
 	</div>
 	
-	<div>	
+	
+	<div class="login">
 		<a href="moveSignup.do">회원가입</a>
 	</div>
 	

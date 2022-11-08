@@ -26,6 +26,6 @@ public class MainController {
 
 //		return "login/loginPage";
 		return "index";
+
 	}
-	
 }
